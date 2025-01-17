@@ -1,0 +1,126 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do corpo */
+/* body {
+    background-color: #f8f9fa;
+    justify-content: center;
+    padding-top: 115px;
+} */
+
+/* Container da ficha */
+.container-relatorio {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    max-width: 1200px; /* Define um limite maior */
+    min-width: 900px; /* Define uma largura mínima */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza na tela */
+}
+
+
+    
+
+
+.titulo-relatorio {
+    font-size: 26px;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Seções de dados */
+.informacoes-gerais, .informacoes-servicos, .informacoes-pecas, .informacoes-totais {
+    margin-bottom: 20px;
+}
+
+.informacoes-gerais h2,
+.informacoes-servicos h2,
+.informacoes-pecas h2,
+.informacoes-totais h2 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.informacoes-gerais p,
+.informacoes-servicos p,
+.informacoes-pecas p,
+.informacoes-totais p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+/* Estilos para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Seção de totais */
+.dados-totais {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.dados-totais p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.valor-final {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    text-align: right;
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos filhos horizontalmente */
+}
+
+.btn-imprimir {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espaçamento do botão para os itens acima */
+}
+
+.btn-imprimir:hover {
+    background-color: #45a049; /* Verde mais escuro */
+}

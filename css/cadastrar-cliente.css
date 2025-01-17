@@ -1,0 +1,235 @@
+/* Card do formulário com largura ajustada */
+.form-card {
+  background-color: #fff;
+  padding: 13px; /* Reduzi o padding para economizar espaço */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Reduzi a largura máxima */
+  width: 100%;
+}
+
+/* Layout para dados pessoais */
+.dados-pessoais-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px; /* Reduzi o gap */
+  margin-bottom: 15px; /* Reduzi a margem inferior */
+}
+
+.coluna-imagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.coluna-dados {
+  gap: 15px; /* Reduzi o gap entre os campos */
+}
+
+/* Estilo para a seção de endereço */
+.endereco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px; /* Reduzi o gap */
+  margin-bottom: 15px;
+
+}
+/* Colocando os botões de Pessoa Física e Jurídica lado a lado */
+.input-container.full-width {
+  display: flex;
+  flex-direction: row;
+  gap: 15px; /* Espaçamento entre os botões */
+  margin-top: 15px;
+
+}
+
+.input-container.full-width label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.input-container.full-width input[type="radio"] {
+  margin-right: 5px; /* Espaço entre o botão e o texto */
+}
+/* Estilo para o container dos inputs */
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  margin-bottom: 3px; /* Reduzi a margem inferior */
+  font-size: 13px; /* Reduzi o tamanho da fonte */
+
+}
+
+.input {
+  padding: 8px; /* Reduzi o padding interno do campo */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #0D3587;
+}
+
+/* Botão de upload customizado */
+.custom-file-upload {
+  background-color: #0D3587;
+  color: white;
+  margin-bottom: 5px;
+  padding: 8px 12px; /* Reduzi o padding */
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 180px; /* Ajustei a largura para ocupar menos espaço */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Escondendo o botão padrão de upload de arquivo */
+input[type="file"] {
+  display: none;
+}
+
+
+.custom-file-upload:hover {
+  background-color: #333;
+}
+
+/* Estilo para imagem de pré-visualização */
+.image-preview {
+  width: 180px; /* Reduzi a largura */
+  height: 160px; /* Reduzi a altura */
+  border: 2px solid #0D3587;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o select de gênero */
+.escolha-genero {
+  padding: 8px; /* Reduzi o padding */
+  font-size: 14px; /* Reduzi o tamanho da fonte */
+  border: 1.5px solid lightgrey;
+  border-radius: 8px; /* Reduzi o border-radius */
+  color: #333;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.escolha-genero:hover {
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0px 8px -5px;
+}
+
+.escolha-genero:focus {
+  border-color: #0D3587;
+}
+
+/* Botão de enviar */
+.botao-submit {
+  padding: 8px 15px; /* Reduzi o padding */
+  font-size: 15px; /* Reduzi o tamanho da fonte */
+  color: white;
+  background-color: #0D3587;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px; /* Reduzi a margem superior */
+}
+
+.botao-submit:hover {
+  background-color: #333;
+}
+
+#updateForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Define duas colunas */
+  gap: 20px; /* Espaçamento entre as colunas e linhas */
+  width: 100%;
+}
+
+/* Estilizando o grupo de entrada (label e input juntos) */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.text-center{
+  font-size: 26px;
+  color: #0D3587;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px
+}
+/* Alinhamento dos botões de ação */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Formulário dentro do modal */
+.modal-forma-pagamento form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container de inputs no modal */
+.input-container-forma {
+  margin-bottom: 20px;
+}
+
+.input-container-forma label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-container-forma input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Alinha o texto da primeira coluna (Nome) e da segunda coluna (Email) à esquerda */
+.table-list th:nth-child(1),
+.table-list td:nth-child(1),
+.table-list th:nth-child(2),
+.table-list td:nth-child(2) {
+    text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dados-pessoais-container {
+    grid-template-columns: 1fr;
+    gap: 10px; /* Ajuste adicional para dispositivos menores */
+  }
+  
+  .coluna-dados,
+  .endereco {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

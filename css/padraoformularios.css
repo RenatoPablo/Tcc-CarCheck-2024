@@ -1,0 +1,188 @@
+ /* Centralização do conteúdo principal */
+ body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}
+
+ main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top:115px;
+}
+
+/* Título centralizado acima do formulário */
+.titulo-formulario {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Readicionado para posicionar corretamente a lista de sugestões */
+  .prop {
+    position: relative; /* Necessário para o posicionamento correto da lista */
+  }
+  
+  /* Estilização dos labels e inputs */
+  label {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1.5px solid lightgrey;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .input:hover {
+    border-color: #888;
+  }
+  /* Ajuste de margens para melhorar o espaçamento */
+.input-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-container label {
+  margin-bottom: 8px;
+}
+  
+  /* Botão de Enviar */
+  button[type="submit"] {
+    grid-column: 1 / span 2;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #198754;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #333;
+  }
+
+  /* Ajuste para centralizar os itens */
+  form div {
+   flex-direction: column;
+}
+
+  /* Estilos para lista de sugestões */
+  .suggestions {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 1000; /* Aumentado para garantir que fique acima de outros elementos */
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    display: none; /* Inicialmente escondido */
+    list-style-type: none;
+    padding: 0;
+    margin: 2px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+
+  }
+  
+  .suggestions.visible {
+    display: block; /* Mostrar quando tiver sugestões */
+  }
+  
+  .suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .suggestions li:hover {
+    background-color: #f0f0f0;
+  }
+  /* Remova a borda do último item para ficar mais clean */
+.suggestions li:last-child {
+  border-bottom: none;
+}
+/* Adiciona um espaço maior no topo do card de sugestões para sombra */
+.suggestions::before {
+  content: '';
+  display: block;
+}
+/* Estilo da lista de serviços adicionados */
+.ul-temporaria {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar a lista */
+}
+
+/* Estilo para os itens dentro da lista */
+.ul-temporaria li {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* Linha de separação entre os itens */
+  border-radius: 8px; /* Bordas arredondadas para os itens */
+  max-height: 180px;
+}
+
+/* Remover borda do último item para ficar mais clean */
+.ul-temporaria li:last-child {
+  border-bottom: none;
+}
+
+/* Estilo para o botão "Remover" */
+.ul-temporaria li button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão "Remover" */
+.ul-temporaria li button:hover {
+  background-color: #ff1a1a;
+}
+  
+
+/* Responsividade para a lista */
+@media (max-width: 768px) {
+  .ul-temporaria li {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .ul-temporaria li button {
+      margin-top: 5px;
+      width: 100%; /* O botão ocupa toda a largura em telas menores */
+  }
+}

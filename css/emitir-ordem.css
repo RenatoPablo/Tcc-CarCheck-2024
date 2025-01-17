@@ -1,0 +1,407 @@
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#finalForm {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.form-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dados-manutencao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    grid-column: span 2; /* Garante que o título ocupe as duas colunas */
+    border-bottom: 2px solid #ddd; /* Linha abaixo do título para separação */
+    padding-bottom: 10px;
+}
+
+.input-container {
+    width: 100%;
+}
+
+.input-container .input,
+.input-container .formaPagamento {
+    padding: 7px;
+    margin: 2px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border: 1.5px solid lightgrey;
+    border-radius: 12px;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#valorTotal {
+    font-weight: bold;
+    background-color: #f0f8ff;
+    border: 2px solid #0d3587;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: right;
+    color: #0d3587; /* Cor do texto para combinar com o destaque */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#addItemBtnServico, #addItemBtnProduto {
+    padding: 12px 17px;
+    font-size: 14px;
+    color: white;
+    background-color: #002775;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px 0; /* Espaçamento entre os botões */
+    width: 100%;
+}
+
+#addItemBtnServico:hover, #addItemBtnProduto:hover {
+    background-color: #333;
+}
+
+.ul-temporaria {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.ul-temporaria li {
+    padding: 2px 7px;
+    margin: 2px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.quantidade-input {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.btn-submit {
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0d3587;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #333;
+}
+
+.subtitulo-ordem {
+    font-size: 20px; /* Tamanho da fonte */
+    color: #0D3587; /* Cor do texto (azul escuro, personalizável) */
+    font-weight: bold; /* Texto em negrito */
+    text-align: left; /* Alinhamento à esquerda */
+    margin: 20px 0 10px 0; /* Espaçamento superior e inferior */
+    padding-left: 10px; /* Recuo do texto */
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento dos cantos */
+}
+
+
+.btn-visualizar {
+    background-color: #ffc107; /* Amarelo */
+    color: #000; /* Texto preto */
+    border-color: #ffc107;
+    border-radius: 5px;
+}
+
+.btn-visualizar:hover {
+    background-color: #e0a800; /* Amarelo escuro */
+    color: #fff; /* Texto branco ao passar o mouse */
+}
+
+/* Estilo para a célula das ações */
+td.acoes {
+    display: flex; /* Usa flexbox para alinhar os itens na mesma linha */
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+    justify-content: flex-start; /* Alinha à esquerda */
+    align-items: center; /* Alinha verticalmente ao centro */
+    white-space: nowrap; /* Evita quebras de linha nos botões */
+}
+
+/* Opcional: ajuste nos botões para consistência */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .dados-manutencao {
+        grid-template-columns: 1fr; /* Em telas menores, uma coluna */
+    }
+
+    #finalForm {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%; /* O botão ocupa toda a largura em telas menores */
+    }
+}
+
+/* Estilo básico para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.botao-desabilitado {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+#abrirListaBtn {
+    background-color: #002775; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-bottom: 8px;
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Arredondar bordas */
+    cursor: pointer; /* Mudar cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+#abrirListaBtn:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+}
+
+#tipoEstoque {
+    background-color: #ffffff; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Arredondar bordas */
+    margin-bottom: 8px;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer; /* Mudar o cursor para indicar clicável */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição para interações */
+}
+
+#tipoEstoque:hover {
+    border-color: #007bff; /* Cor da borda ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.3); /* Realça a sombra ao passar o mouse */
+}
+
+#tipoEstoque:focus {
+    border-color: #0056b3; /* Cor da borda ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+    box-shadow: 0px 0px 10px rgba(0, 86, 179, 0.5); /* Efeito visual ao focar */
+}
+
+#addItemBtnProdutoUpdate{
+    background-color: #002775; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-bottom: 4px;
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Arredondar bordas */
+    cursor: pointer; /* Mudar cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+#addItemBtnProdutoUpdate:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+}
+#inputValorTotal {
+    font-weight: bold;
+    background-color: #f0f8ff;
+    border: 2px solid #0d3587;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: right;
+    color: #0d3587; /* Cor do texto para combinar com o destaque */
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Estilização para o input de Valor do Pagamento */
+#valorPagamento {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Arredondar cantos */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efeitos de transição */
+}
+
+/* Estilização para o input de Data do Pagamento */
+#dataPagamento {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Arredondar cantos */
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efeitos de transição */
+}
+
+
+#tabelaEdicaoItens {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+    margin-top: 10px; /* Espaçamento acima da tabela */
+    background-color: #f9f9f9; /* Cor de fundo da tabela */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 6px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que o arredondamento funcione */
+}
+
+#tabelaEdicaoItens th, #tabelaEdicaoItens td {
+    text-align: center; /* Alinhamento do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+#tabelaEdicaoItens th {
+    background-color: #0D3587; /* Fundo azul escuro */
+    color: white; /* Cor do texto branco */
+    font-weight: bold; /* Negrito no cabeçalho */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+#tabelaEdicaoItens tr:nth-child(even) {
+    background-color: #f4f4f4; /* Cor alternada para linhas pares */
+}
+
+#tabelaEdicaoItens tr:hover {
+    background-color: #e8f0fe; /* Fundo ao passar o mouse */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+#tabelaEdicaoItens td button {
+    background-color: #dc3545; /* Botão vermelho */
+    color: white; /* Cor do texto branco */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: none; /* Remove bordas */
+    border-radius: 3px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para "mãozinha" */
+    transition: background-color 0.3s ease; /* Efeito suave de transição */
+}
+
+#tabelaEdicaoItens td button:hover {
+    background-color: #d9363e; /* Cor mais escura ao passar o mouse */
+}
+table.table-list .btn-success.btn-sm {
+    margin-bottom: 6px; /* Adiciona margem inferior */
+    width: 100%;
+}
+table.table-list .btn-primary.btn-sm {
+    margin-bottom: 6px; /* Espaçamento entre os botões */
+    width: 100%;
+}
+table.table-list .btn-danger.btn-sm {
+    width: 100%;
+}
+#editarCodigo, #editarValorParcela, #editarNumParcela:read-only {
+    background-color: #eaeaea; /* Cor de fundo específica para readonly */
+    color: #555; /* Cor do texto */
+    cursor: not-allowed; /* Muda o cursor para indicar que o campo é somente leitura */
+}
+th.col-data, td.col-data {
+    min-width: 100px; /* Define uma largura mínima */
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-align: center; /* Alinha o texto ao centro */
+}
+.parcela-valor {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #28a745; /* Cor verde para destacar */
+    font-weight: bold;
+}

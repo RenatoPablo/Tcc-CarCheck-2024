@@ -1,0 +1,72 @@
+body{
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+/* Adiciona um espaço acima do container inicial para afastá-lo do cabeçalho */
+.div-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px; /* Força um espaço entre o cabeçalho e o conteúdo */
+    color: #0D3587;
+}
+
+/* Estilo para o título */
+.div-inicial h2 {
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo para o parágrafo de descrição */
+.div-inicial-p {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+/* Container dos cards */
+.container-acesso {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 20px;
+    justify-content: center;
+    color: white;
+    margin-top: 25px;
+}
+
+.square {
+    width: 250px;
+    height: 205px;
+    background-color: #0D3587;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15%;
+    
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.square:hover {
+    background-color: #0b2a63;
+}
+
+.container-meio{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+a{
+    color: white;
+    text-decoration: none;
+}

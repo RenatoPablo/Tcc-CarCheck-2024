@@ -1,0 +1,21 @@
+/* Estilo para a barra de pesquisa */
+.search-bar {
+  position: relative;
+  width: 100%;
+}
+
+/* Estilo do input para ter espaço para o ícone */
+.search-bar input {
+  padding-left: 30px; /* Espaço suficiente para o ícone */
+}
+
+/* Estilo para o ícone de pesquisa */
+.icon-search {
+  position: absolute;
+  left: 10px; /* Posiciona o ícone à esquerda do input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999; /* Cor do ícone */
+  font-size: 14px; /* Tamanho do ícone */
+  pointer-events: none; /* Desativa a interação com o ícone */
+}

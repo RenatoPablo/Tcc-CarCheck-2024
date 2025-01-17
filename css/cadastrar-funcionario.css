@@ -1,0 +1,14 @@
+.endereco {
+  margin-bottom: 25px;
+}
+.input-container {
+  display: flow;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.modal-content input {
+  width: 100% !important; /* Ocupa toda a largura */
+  box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+  margin-bottom: 10px; /* Adiciona espaçamento entre os campos */
+}

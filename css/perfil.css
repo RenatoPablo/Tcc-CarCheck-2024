@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-color: #f4f7fc;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.perfil-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    margin: 130px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ações de alterar e salvar foto abaixo da foto de perfil */
+.foto-actions {
+    display: flex;
+    flex-direction: column; /* Coloca os botões em coluna para ficarem abaixo da foto */
+    align-items: center; /* Centraliza os botões */
+    margin-top: 10px; /* Um pouco de margem para dar espaçamento */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #0D3587;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+/* Esconde o input file padrão */
+input[type="file"] {
+    display: none; /* Esconde o input de arquivo padrão */
+}
+
+.btn-upload {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-upload:hover {
+    background-color: #218838;
+}
+
+.perfil-info {
+    margin-left: 30px;
+    text-align: center;
+    flex: 1;
+}
+
+.perfil-info h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.perfil-info p {
+    font-size: 18px;
+    color: #777;
+}
+
+.perfil-detalhes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.perfil-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.perfil-card h3 {
+    font-size: 20px;
+    color: #002775;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #e4e4e4;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+input:focus {
+    border-color: #002775;
+    outline: none;
+}
+
+/* Botão de sair */
+.logout-container {
+    margin-top: 30px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .perfil-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .perfil-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .perfil-detalhes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

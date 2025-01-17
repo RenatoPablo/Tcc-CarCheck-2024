@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* Estilos gerais do body */
+body {
+    position: relative;
+  }
+  
+  header {
+    background-color: #002775;
+    color: white;
+    height: 100px;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o título e logo no header */
+  .container-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Estilo para o título */
+  header h1 {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 900;
+    margin: 0;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Move o título para o centro exato */
+  }
+  
+  /* Alinhamento dos ícones na barra superior */
+  .icons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-left: auto; /* Empurra os ícones para o lado direito */
+    align-items: center;
+    transition: transform 0.5s ease;
+    padding-right: 60px; /* Ajuste de espaço para que não colidam com o hamburguer */
+  }
+  
+  /* Ícone de notificação */
+  .icons-not {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .icons-not i {
+    font-size: 30px;
+  }
+  
+  /* Ajuste dos ícones quando a sidebar está aberta */
+  .sidebar.open ~ .icons {
+    transform: translateX(-200px); /* Move os ícones para a esquerda quando a sidebar está aberta */
+  }
+  
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, #0D3587, #004AAD); /* Gradiente para um visual mais moderno */
+  color: white;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3); /* Sombra para destacar a sidebar */
+  box-sizing: border-box;
+}
+
+/* Sidebar aberta */
+.sidebar.open {
+  width: 250px;
+  border-left: 3px solid #00dbde;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5); /* Mais destaque quando aberta */
+}
+
+/* Links dentro da sidebar */
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 5px 15px;
+}
+
+.sidebar a i {
+  font-size: 18px;
+  color: #ffffffcc; /* Ícones com transparência leve */
+  transition: color 0.3s ease;
+}
+
+/* Hover nos links */
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  color: #00dbde; /* Cor de destaque */
+}
+
+.sidebar a:hover i {
+  color: #00dbde; /* Ícone também muda para o destaque */
+}
+
+/* Títulos de seções dentro da sidebar */
+.sidebar h4 {
+  font-size: 14px;
+  color: #ffffffcc; /* Branco com transparência */
+  margin: 20px 15px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Linha sutil */
+  padding-bottom: 5px;
+}
+
+/* Ajuste para o botão de fechamento da sidebar */
+.sidebar .toggle {
+  align-self: flex-end;
+  margin: 10px 20px;
+  font-size: 20px;
+  color: #ffffffcc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar .toggle:hover {
+  color: #00dbde; /* Destaque ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      box-shadow: none;
+  }
+
+  .sidebar a {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+
+  .sidebar.open {
+      width: 100%;
+  }
+}
+
+  /* Botão hamburguer */
+  #checkbox {
+    display: none;
+  }
+  
+  .toggle {
+    position: absolute;
+    width: 37px; /* Aumenta a área clicável */
+    height: 32px; /* Aumenta a área clicável */
+    cursor: pointer; /* Garante que o cursor de ponteiro seja exibido ao passar sobre o bloco */
+    right: 20px; /* Posiciona o botão hamburguer mais à direita */
+    top: 35px; /* Alinha verticalmente no centro do header */
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza as barrinhas dentro da área */
+  }
+  
+  .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    width: 100%; /* Define que as barras ocupam toda a largura do botão */
+    border-radius: calc(4px / 2);
+    background: #ffffff;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+  }
+  
+  /***** Spin Animation para o hamburguer *****/
+  .bar--top {
+    bottom: calc(50% + 11px + 4px / 2);
+    transition-property: bottom, transform;
+    transition-delay: calc(0s + 0.35s), 0s;
+  }
+  
+  .bar--middle {
+    top: calc(50% - 4px / 2);
+    transition-property: opacity;
+    transition-delay: calc(0s + 0.35s);
+  }
+  
+  .bar--bottom {
+    top: calc(50% + 11px + 4px / 2);
+    transition-property: top, transform;
+    transition-delay: calc(0s + 0.35s), 0s;
+  }
+  
+  #checkbox:checked + .toggle .bar--top {
+    bottom: calc(50% - 4px / 2);
+    transform: rotate(135deg);
+    transition-delay: 0s, calc(0s + 0.35s);
+  }
+  
+  #checkbox:checked + .toggle .bar--middle {
+    opacity: 0;
+    transition-duration: 0s;
+    transition-delay: calc(0s + 0.35s);
+  }
+  
+  #checkbox:checked + .toggle .bar--bottom {
+    top: calc(50% - 4px / 2);
+    transform: rotate(225deg);
+    transition-delay: 0s, calc(0s + 0.35s);
+  }
+  
+  
+  header .buttonheader {
+   display: flex;
+   font-size: 12px;
+   font-weight: bold;
+   height: 35px;
+   width: 90px;
+   align-items: center;
+   justify-content: center;
+   background-color: #eeeeee4b;
+   border-radius: 3px;
+   letter-spacing: 1px;
+   transition: all 0.2s linear;
+   cursor: pointer;
+   border: none;
+   background: #fff;
+  }
+  
+  header .buttonheader> svg {
+   margin-right: 5px;
+   margin-left: 5px;
+   font-size: 20px;
+   transition: all 0.4s ease-in;
+  }
+  
+  header .buttonheader:hover > svg {
+   font-size: 1.2em;
+   transform: translateX(-5px);
+  }
+  
+  header .buttonheader:hover {
+   box-shadow: 2px 2px 8px #d1d1d1, -2px -2px 8px #ffffff;
+   transform: translateY(-2px);
+  }
+
+  .logoCarcheck img{
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+  }

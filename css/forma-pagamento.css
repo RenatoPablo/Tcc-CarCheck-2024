@@ -1,0 +1,48 @@
+body {
+    padding-top: 115px;
+}
+/* Estilos para as colunas da tabela */
+.table-list .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Coluna "Forma de Pagamento" alinhada à esquerda */
+.table-list .col-8 {
+    text-align: left;
+}
+
+/* Coluna "Ações" alinhada à direita */
+.table-list .col-4.actions {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estilo dos botões */
+.btn-primary, .btn-danger {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0066cc;
+}
+
+.btn-primary:hover {
+    background-color: #004da3;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}

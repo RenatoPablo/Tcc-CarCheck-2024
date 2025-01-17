@@ -1,0 +1,8 @@
+/* Formulário responsivo */
+form {
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: transparent;
+  }
+  

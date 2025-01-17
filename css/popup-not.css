@@ -1,0 +1,56 @@
+/* Estilos para o popup de notificação */
+.notification {
+    visibility: hidden; /* Inicialmente invisível */
+    min-width: 250px;
+    background-color: #0D3587;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de aparecer/desaparecer */
+.notification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+/* Efeito fade in */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+/* Efeito fade out */
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* Estilo para o botão de fechar */
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}

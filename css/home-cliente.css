@@ -1,0 +1,56 @@
+.containercliente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.icons{
+    display: flex;
+    gap: 37px;
+}
+.botao{
+    background-color: transparent; /* Botão sem cor de fundo */
+    border: none;       /* Remove a borda padrão */
+    cursor: pointer; /* Mostra o cursor de mão para indicar que é clicável */
+    padding: 0;      /* Remove o preenchimento padrão */
+}
+
+.container-acesso-rapido{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.container-acesso-rapido h2{
+    margin: 0 auto;
+    font-size: 50px;
+    color: #0D3587;
+    position: relative;
+    top: -35px;
+    /* left: -35px; */
+    
+    justify-items: center;
+
+    
+    
+}
+
+.container-header{
+    
+    display: flex;
+    align-items: center;
+}
+
+.container-acesso{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 230px);
+    gap: 20px;
+    justify-content: center;
+    color: white;
+    justify-items: center;
+}
+

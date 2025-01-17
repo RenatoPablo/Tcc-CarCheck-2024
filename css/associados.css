@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para a página de associados */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 115px;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Header dos associados */
+.associados-header {
+    padding-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.associados-titulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: #0D3587;
+    font-weight: bold;
+}
+
+.associados-descricao {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: #0D3587;
+    margin-top: 8px;
+}
+
+/* Container dos associados */
+.container-associados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Card de cada associado */
+.associado-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.associado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.associado-nome {
+    color: #0D3587;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.associado-info {
+    font-size: 0.95rem;
+    color: #000000;
+    margin: 8px 0;
+}
+
+/* Botão de Agendamento */
+.btn-agendar-servico {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-agendar-servico:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 768px) {
+    .associados-titulo {
+        font-size: 2rem;
+    }
+
+    .associados-descricao {
+        font-size: 0.9rem;
+    }
+
+    .associado-nome {
+        font-size: 1.3rem;
+    }
+
+    .btn-agendar-servico {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

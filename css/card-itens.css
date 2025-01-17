@@ -1,0 +1,93 @@
+/* From Uiverse.io by Pravins01 */ 
+.card {
+    position: relative;
+    width: 160px; /* Largura reduzida em 20px */
+    height: 184px; /* Altura reduzida em 20px */
+    background-color: #0d3587;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px; /* Padding reduzido em 2px */
+    gap: 10px; /* Gap reduzido em 2px */
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 190px; /* Largura reduzida em 20px */
+    height: 214px; /* Altura reduzida em 20px */
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #301ef5 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #301ef5 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(18px); /* Desfoque reduzido em 2px */
+  }
+  
+  .heading {
+    font-size: 17
+    px; /* Tamanho da fonte reduzido em 2px */
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  
+  .card p:not(.heading) {
+    font-size: 12px; /* Tamanho da fonte reduzido em 2px */
+  }
+  
+  .card p:last-child {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .card:hover::after {
+    filter: blur(28px); /* Desfoque reduzido em 2px */
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.20) scaleY(0.93);
+  }
+
+  .img-card {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    
+  }
+  .img-card-especifica{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    /* bottom: 20px; */
+    width: 100px;
+    height: 100px;
+  }
+  
+  .img-card-acesso {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    
+  }

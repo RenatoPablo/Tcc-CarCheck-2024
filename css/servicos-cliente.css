@@ -1,0 +1,177 @@
+/* Reset */
+body, h1, h2, h3, p, ul, li, button, a, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6fc;
+    color: #333;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Introdução */
+.intro-servicos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro-servicos h1 {
+    font-size: 32px;
+    color: #0D3587;
+    margin-bottom: 10px;
+}
+
+.intro-servicos p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Serviços Disponíveis */
+.servicos-disponiveis h2 {
+    font-size: 24px;
+    color: #0D3587;
+    margin-bottom: 20px;
+}
+
+.servicos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding-bottom: 80px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #e6e9f4);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon i {
+    font-size: 50px;
+    color: #0D3587;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0D3587;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0a2c6b;
+}
+
+/* Histórico */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f7f7f7;
+    color: #0D3587;
+    font-size: 16px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+}
+
+.status.concluido {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.andamento {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Suporte */
+.suporte-cliente {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.suporte-cliente h2 {
+    font-size: 22px;
+    color: #0D3587;
+    margin-bottom: 10px;
+}
+
+.suporte-cliente p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-support {
+    background-color: #0D3587;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-support:hover {
+    background-color: #0a2c6b;
+}

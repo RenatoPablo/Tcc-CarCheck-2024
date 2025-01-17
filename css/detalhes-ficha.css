@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 125px;
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 98%; /* Expande para ocupar quase toda a largura */
+    max-width: 1800px; /* Maior largura máxima */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0D3587;
+}
+
+/* Ficha do veículo */
+.ficha-veiculo {
+    display: flex;
+    justify-content: space-between; /* Campos alinhados horizontalmente */
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    gap: 20px; /* Espaçamento maior entre os campos */
+}
+
+.ficha-veiculo .campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.ficha-veiculo .campo label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.ficha-veiculo .campo span {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+/* Tabelas */
+.tabelas-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabela-container {
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.tabela-container h2 {
+    font-size: 2rem;
+    color: #0D3587;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos da tabela */
+.tabela {
+    width: 100%; /* Expande a tabela para ocupar toda a largura */
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+.tabela th, .tabela td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.tabela th {
+    background-color: #0D3587;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.tabela tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabela tbody tr:hover {
+    background-color: #ececec;
+}
+
+/* Tabelas roláveis */
+.tabela-container {
+    max-height: 600px; /* Permite mais linhas antes de ativar o scroll */
+    overflow-y: auto;
+}
+
+.tabela::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabela::-webkit-scrollbar-thumb {
+    background-color: #0D3587;
+    border-radius: 8px;
+}
+
+.tabela::-webkit-scrollbar-track {
+    background-color: #f0f4f8;
+}
+
+.btn-imprimir {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-imprimir:hover {
+    background-color: #218838;
+}
+#conteudo {
+    width: 98%; /* Ocupa quase toda a largura da tela */
+    max-width: 1600px; /* Limite máximo em telas grandes */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaço acima/abaixo */
+    background-color: #fff; /* Fundo branco para destaque */
+    border-radius: 10px; /* Bordas arredondadas para um visual moderno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+}
