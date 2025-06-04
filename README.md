@@ -34,6 +34,8 @@ Mesmo sendo um projeto simples, **foi avaliado com nota máxima** pela banca. E 
 
 📦 Projeto TCC
 ┣ 📁 .vscode/
+
+
 ┣ 📁 config/
 ┣ 📁 css/
 ┣ 📁 fontawesome/
