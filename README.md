@@ -90,6 +90,9 @@ Este projeto foi apresentado como meu **TCC final**, e **recebeu nota máxima** 
 ![Tela do sistema parte do funcionario](/assets/print-home-func.png) <!-- substitua por um print real se quiser -->
 
 
+---
+
+
 - Tela que o cliente tem acesso:
 ![Tela do sistema parte do cliente](/assets/print-home-cliente.png) <!-- substitua por um print real se quiser -->
 
