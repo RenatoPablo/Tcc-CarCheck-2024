@@ -38,6 +38,9 @@ Mesmo sendo um projeto simples, **foi avaliado com nota máxima** pela banca. E 
 ┣ 📁 .vscode/
 
 
+┣ 📁 assets/
+
+
 ┣ 📁 config/
 
 
