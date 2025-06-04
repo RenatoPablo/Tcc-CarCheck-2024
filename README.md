@@ -33,18 +33,37 @@ Mesmo sendo um projeto simples, **foi avaliado com nota máxima** pela banca. E 
 ## 🗂 Estrutura do Projeto
 
 📦 Projeto TCC
+
+
 ┣ 📁 .vscode/
 
 
 ┣ 📁 config/
+
+
 ┣ 📁 css/
+
+
 ┣ 📁 fontawesome/
+
+
 ┣ 📁 function/
+
+
 ┣ 📁 image/
+
+
 ┣ 📁 includes/
+
+
 ┣ 📁 js/
+
+
 ┣ 📁 pages/
+
+
 ┗ 📁 sql/
+
 
 
 > A pasta `image/` contém imagens estáticas e ícones. O sistema pode ser executado localmente sem problemas.
