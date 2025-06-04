@@ -112,7 +112,7 @@ Este projeto foi apresentado como meu **TCC final**, e **recebeu nota máxima** 
 Se quiser trocar uma ideia, mandar feedback ou só dizer "parabéns", é só me chamar:
 
 - GitHub: [@RenatoPablo](https://github.com/RenatoPablo)
-- LinkedIn: [linkedin.com/in/seu-perfil](#) <!-- coloca seu link aqui se quiser -->
+- LinkedIn: [[linkedin.com/in/seu-perfil](https://www.linkedin.com/in/renato-pablo-8a876023a/?originalSubdomain=br)](#) <!-- coloca seu link aqui se quiser -->
 
 ---
 
